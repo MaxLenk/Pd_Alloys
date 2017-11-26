@@ -6,9 +6,11 @@ from ase.build import fcc111, add_adsorbate
 
 #build the Pt crystal structure
 lc=4.02 #angstrom
-adsorbate_distance = 1.5
+adsorbate_distance = 0.5
 alloy_name = 'Pt'
 slab = fcc111('Pd', size=(3,3,2), vacuum=10.0)
+add_adsorbate(slab,'H',adsorbate_distance,'fcc',(1,1))
+add_adsorbate(slab,'H',adsorbate_distance+.55,'fcc',(1,1))
 print(slab.get_tags())
 slab[2].symbol = alloy_name
 slab[6].symbol = alloy_name
