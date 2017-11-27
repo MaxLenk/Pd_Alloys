@@ -8,7 +8,7 @@ from ase.build import fcc111, add_adsorbate
 lc=4.07 #angstrom
 adsorbate_distance = 0.5
 alloy_name = 'Ag'
-slab = fcc111('Pd', size=(3,3,2), vacuum=10.0)
+slab = fcc111('Pd', size=(3,3,2), vacuum=10.0,a=lc)
 add_adsorbate(slab,'H',adsorbate_distance,'fcc',(1,1))
 add_adsorbate(slab,'H',adsorbate_distance+.55,'fcc',(1,1))
 print(slab.get_tags())
